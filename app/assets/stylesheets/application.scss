@@ -1,2 +1,39 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#custom-bootstrap-menu.navbar-default {
+  .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+  }
+  font-size: 15px;
+  background-color: rgba(0, 206, 232, 1);
+  border-width: 0px;
+  border-radius: 0px;
+  .navbar-nav > {
+    li > a {
+      color: rgba(255, 255, 255, 1);
+      background-color: rgba(248, 248, 248, 0);
+      &:hover, &:focus {
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(0, 171, 194, 1);
+      }
+    }
+    .active > a {
+      color: rgba(255, 255, 255, 1);
+      background-color: rgba(0, 171, 194, 1);
+      &:hover, &:focus {
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(0, 171, 194, 1);
+      }
+    }
+  }
+  .navbar-toggle {
+    border-color: #00abc2;
+    &:hover, &:focus, .icon-bar {
+      background-color: #00abc2;
+    }
+    &:hover .icon-bar, &:focus .icon-bar {
+      background-color: #00cee8;
+    }
+  }
+}

@@ -11,8 +11,8 @@
             <ul class="nav navbar-nav navbar-left">
 
         <li ><%= link_to "Home", root_path %></li>
-        <li ><a  data-toggle="modal" data-target="#login-modal">Login</a></li>
-        <li><a data-toggle="modal" data-target="#signup-modal">Sign Up</a></li>
+        <li style="cursor:pointer"><a  data-toggle="modal" data-target="#login-modal">Login</a></li>
+        <li style="cursor:pointer"><a data-toggle="modal" data-target="#signup-modal">Sign Up</a></li>
         <li><%= link_to "Booking", booking_path %></li>
             </ul>
         </div>
@@ -113,6 +113,11 @@
 .login-help{
   font-size: 12px;
 }
+.gender
+{  
+  height: 44px;
+  margin-bottom: 10px;
+}
 </style>
 
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -126,7 +131,7 @@
           </form>
           
           <div class="login-help">
-          <a href="#">Register</a> - <a href="#">Forgot Password</a>
+          <a href="#">Register</a>
           </div>
         </div>
       </div>
@@ -139,13 +144,20 @@
         <div class="loginmodal-container">
           <h1>Register User</h1><br>
           <form>
-          <input type="text" name="user" placeholder="Name" required>
-          <input type="password" name="pass" placeholder="Password" required>
+          <input type="text" name="email" placeholder="Email" required>
+          <input type="password" name="pass" placeholder="pwd" required>
+          <input type="password" name="conf_pass" placeholder="cpwd" required>
+          <input type="text" name="name" placeholder="Name" required>
+          <select class="gender form-control" required>
+          <option>Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          </select>
           <input type="submit" name="login" class="login loginmodal-submit" value="Login">
           </form>
           
           <div class="login-help">
-          <a href="#">Register</a> - <a href="#">Forgot Password</a>
+          <a href="#">Log In</a>
           </div>
         </div>
       </div>
